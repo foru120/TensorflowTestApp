@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:padding="5dp">
+        <ImageView
+            android:id="@+id/imgRight"
+            android:scaleType="fitXY"
+            android:layout_width="150dp"
+            android:layout_height="90dp"
+            android:contentDescription="@string/no_image"/>
+        <ImageView
+            android:id="@+id/imgLeft"
+            android:scaleType="fitXY"
+            android:layout_width="150dp"
+            android:layout_height="90dp"
+            android:contentDescription="@string/no_image"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="2dp">
+
+        <Button
+            android:id="@+id/btnGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gallery"/>
+
+        <Button
+            android:id="@+id/btnVerification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/verification"/>
+
+        <Button
+            android:id="@+id/btnGrayscale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/grayscale"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:text="result"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:padding="5dp">
+        <ImageView
+            android:id="@+id/imgLowRight"
+            android:scaleType="center"
+            android:layout_width="150dp"
+            android:layout_height="90dp"
+            android:contentDescription="@string/no_image"/>
+        <ImageView
+            android:id="@+id/imgLowLeft"
+            android:scaleType="center"
+            android:layout_width="150dp"
+            android:layout_height="90dp"
+            android:contentDescription="@string/no_image"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:padding="5dp">
+        <ImageView
+            android:id="@+id/imgMidRight"
+            android:scaleType="center"
+            android:layout_width="150dp"
+            android:layout_height="90dp"
+            android:contentDescription="@string/no_image"/>
+        <ImageView
+            android:id="@+id/imgMidLeft"
+            android:scaleType="center"
+            android:layout_width="150dp"
+            android:layout_height="90dp"
+            android:contentDescription="@string/no_image"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:padding="5dp">
+        <ImageView
+            android:id="@+id/imgHighRight"
+            android:scaleType="center"
+            android:layout_width="150dp"
+            android:layout_height="90dp"
+            android:contentDescription="@string/no_image"/>
+        <ImageView
+            android:id="@+id/imgHighLeft"
+            android:scaleType="center"
+            android:layout_width="150dp"
+            android:layout_height="90dp"
+            android:contentDescription="@string/no_image"/>
+    </LinearLayout>
+</LinearLayout>

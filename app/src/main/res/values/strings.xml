@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TensorflowTestApp</string>
+    <string name="no_image">No Image</string>
+    <string name="gallery">Gallery</string>
+    <string name="verification">Verification</string>
+    <string name="grayscale">Grayscale</string>
+</resources>
