@@ -107,6 +107,8 @@ public class TensorFlowClassifier {
      */
     public int verificationEye(float[] lowRightData, float[] midRightData, float[] highRightData,
                                float[] lowLeftData, float[] midLeftData, float[] highLeftData) {
+        long startTime = System.currentTimeMillis();
+
         TraceCompat.beginSection("verificationEye");
 
         TraceCompat.beginSection("feed");
@@ -122,13 +124,14 @@ public class TensorFlowClassifier {
                 tii.feed(this.leftInputNames[i], highLeftData, 1, this.heights[i], this.widths[i], 1);
             }
         }
+//        tii.feed("right/input_scope/is_training", new boolean[]{false}, 1);
+//        tii.feed("left/input_scope/is_training", new boolean[]{false}, 1);
         TraceCompat.endSection();
 
         TraceCompat.beginSection("run");
         tii.run(this.outputNames, this.runStats);
         TraceCompat.endSection();
 
-        // Copy the output Tensor back into the output array.
         TraceCompat.beginSection("fetch");
         for (int i = 0; i < this.outputNames.length; i++) {
             float[] outputs = new float[this.numClasses];
@@ -161,6 +164,8 @@ public class TensorFlowClassifier {
                 maxIndex = i;
             }
         }
+        long endTime = System.currentTimeMillis();
+
         return maxIndex;
     }
 }
